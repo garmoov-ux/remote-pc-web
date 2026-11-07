@@ -97,7 +97,7 @@ export function HeaderNav({
                   ]
                 </span>
                 {isActive && (
-                  <span className="absolute inset-x-2 bottom-0 h-[2px] bg-[#00E5FF] shadow-[0_0_8px_#00E5FF]" />
+                  <span className="absolute inset-x-2 bottom-0 h-0.5 bg-[#00E5FF] shadow-[0_0_8px_#00E5FF]" />
                 )}
               </a>
             );

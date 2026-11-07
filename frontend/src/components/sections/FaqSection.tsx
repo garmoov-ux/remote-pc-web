@@ -37,7 +37,7 @@ export function FaqSection({ faqs }: FaqSectionProps) {
       aria-labelledby="faq-section-title"
       className="relative z-10 scroll-mt-20 border-t border-white/10 py-20 sm:py-24"
     >
-      <div className="mx-auto max-w-[1080px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-270 px-4 sm:px-6 lg:px-8">
         {/* 섹션 상단 헤더 */}
         <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>

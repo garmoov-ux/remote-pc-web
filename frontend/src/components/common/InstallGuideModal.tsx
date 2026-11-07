@@ -161,10 +161,10 @@ export function InstallGuideModal({
                 key={sec.stepCode}
                 className={`border p-3.5 sm:p-4 ${
                   idx === 0
-                    ? "border-[#00E5FF]/40 bg-[#00E5FF]/[0.05]"
+                    ? "border-[#00E5FF]/40 bg-[#00E5FF]/5"
                     : idx === 1
-                    ? "border-[#B4FF39]/35 bg-[#B4FF39]/[0.04]"
-                    : "border-[#FF2E97]/35 bg-[#FF2E97]/[0.04]"
+                    ? "border-[#B4FF39]/35 bg-[#B4FF39]/4"
+                    : "border-[#FF2E97]/35 bg-[#FF2E97]/4"
                 }`}
               >
                 <div className="flex items-center gap-2">
@@ -236,7 +236,7 @@ export function InstallGuideModal({
           </div>
 
           {/* 하단 당근양파님 응원 인용구 */}
-          <div className="flex items-start gap-2.5 border border-[#B4FF39]/30 bg-[#B4FF39]/[0.06] p-3.5">
+          <div className="flex items-start gap-2.5 border border-[#B4FF39]/30 bg-[#B4FF39]/6 p-3.5">
             <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#B4FF39]" />
             <p className="text-xs font-bold leading-relaxed text-white">
               &ldquo;{scenario.closingQuote}&rdquo;

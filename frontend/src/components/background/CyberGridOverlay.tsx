@@ -12,15 +12,15 @@ export function CyberGridOverlay() {
       <div className="cyber-grid-pattern absolute inset-0 opacity-45" />
       {/* 상단/하단 라디얼 글로우 */}
       <div
-        className="absolute -top-40 left-1/4 h-[520px] w-[680px] rounded-full blur-[130px]"
+        className="absolute -top-40 left-1/4 h-130 w-170 rounded-full blur-[130px]"
         style={{ background: "radial-gradient(circle, rgba(0,229,255,0.11) 0%, transparent 70%)" }}
       />
       <div
-        className="absolute top-1/3 -right-32 h-[460px] w-[560px] rounded-full blur-[140px]"
+        className="absolute top-1/3 -right-32 h-115 w-140 rounded-full blur-[140px]"
         style={{ background: "radial-gradient(circle, rgba(255,46,151,0.09) 0%, transparent 70%)" }}
       />
       {/* 수직 스캔 스윕 바 */}
-      <div className="cyber-scan-sweep absolute inset-x-0 h-[2px] bg-linear-to-r from-transparent via-[#00E5FF]/40 to-transparent" />
+      <div className="cyber-scan-sweep absolute inset-x-0 h-0.5 bg-linear-to-r from-transparent via-[#00E5FF]/40 to-transparent" />
     </div>
   );
 }
