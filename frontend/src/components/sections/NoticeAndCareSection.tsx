@@ -62,24 +62,22 @@ export function NoticeAndCareSection({
             return (
               <article
                 key={notice.id}
-                className={`chamfer-panel flex flex-col justify-between border bg-[#101019] p-6 sm:p-7 ${
-                  isExitRule
+                className={`chamfer-panel flex flex-col justify-between border bg-[#101019] p-6 sm:p-7 ${isExitRule
                     ? "border-[#FF2E97]/50 shadow-[0_0_30px_rgba(255,46,151,0.12)]"
                     : isMandatory
-                    ? "border-[#FFB800]/45"
-                    : "border-[#00E5FF]/45"
-                }`}
+                      ? "border-[#FFB800]/45"
+                      : "border-[#00E5FF]/45"
+                  }`}
               >
                 <div>
                   <div className="mb-4 flex items-center justify-between">
                     <span
-                      className={`inline-flex items-center gap-1.5 px-2.5 py-1 font-mono text-[11px] font-bold ${
-                        isExitRule
+                      className={`inline-flex items-center gap-1.5 px-2.5 py-1 font-mono text-[11px] font-bold ${isExitRule
                           ? "bg-[#FF2E97]/15 text-[#FF2E97]"
                           : isMandatory
-                          ? "bg-[#FFB800]/15 text-[#FFB800]"
-                          : "bg-[#00E5FF]/15 text-[#00E5FF]"
-                      }`}
+                            ? "bg-[#FFB800]/15 text-[#FFB800]"
+                            : "bg-[#00E5FF]/15 text-[#00E5FF]"
+                        }`}
                     >
                       {isExitRule ? (
                         <AlertOctagon className="h-3.5 w-3.5" />

@@ -83,11 +83,10 @@ export function MobileMenuOverlay({
               key={item.id}
               href={`#${item.id}`}
               onClick={onClose}
-              className={`font-display text-2xl sm:text-3xl font-black tracking-wide py-2.5 transition ${
-                isActive
-                  ? "text-[#00E5FF] drop-shadow-[0_0_18px_rgba(0,229,255,0.6)]"
-                  : "text-white hover:text-[#00E5FF]"
-              }`}
+              className={`font-display text-2xl sm:text-3xl font-black tracking-wide py-2.5 transition ${isActive
+                ? "text-[#00E5FF] drop-shadow-[0_0_18px_rgba(0,229,255,0.6)]"
+                : "text-white hover:text-[#00E5FF]"
+                }`}
             >
               {item.label}
             </a>

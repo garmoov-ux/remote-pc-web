@@ -317,11 +317,10 @@ export function AdminDashboardView() {
             <button
               type="button"
               onClick={() => setActiveTab("stats")}
-              className={`inline-flex items-center gap-1.5 px-4 py-2 text-xs font-extrabold ${
-                activeTab === "stats"
+              className={`inline-flex items-center gap-1.5 px-4 py-2 text-xs font-extrabold ${activeTab === "stats"
                   ? "bg-[#00E5FF] text-[#05080F]"
                   : "border border-white/15 bg-[#101019] text-[#C4CAD9]"
-              }`}
+                }`}
             >
               <BarChart3 className="h-4 w-4" />
               <span>다운로드 전환 로그</span>
@@ -329,11 +328,10 @@ export function AdminDashboardView() {
             <button
               type="button"
               onClick={() => setActiveTab("games")}
-              className={`inline-flex items-center gap-1.5 px-4 py-2 text-xs font-extrabold ${
-                activeTab === "games"
+              className={`inline-flex items-center gap-1.5 px-4 py-2 text-xs font-extrabold ${activeTab === "games"
                   ? "bg-[#00E5FF] text-[#05080F]"
                   : "border border-white/15 bg-[#101019] text-[#C4CAD9]"
-              }`}
+                }`}
             >
               <Gamepad2 className="h-4 w-4" />
               <span>서비스 게임 추가·관리</span>
@@ -341,11 +339,10 @@ export function AdminDashboardView() {
             <button
               type="button"
               onClick={() => setActiveTab("release")}
-              className={`inline-flex items-center gap-1.5 px-4 py-2 text-xs font-extrabold ${
-                activeTab === "release"
+              className={`inline-flex items-center gap-1.5 px-4 py-2 text-xs font-extrabold ${activeTab === "release"
                   ? "bg-[#00E5FF] text-[#05080F]"
                   : "border border-white/15 bg-[#101019] text-[#C4CAD9]"
-              }`}
+                }`}
             >
               <PackageCheck className="h-4 w-4" />
               <span>접속기 릴리스 버전 관리</span>

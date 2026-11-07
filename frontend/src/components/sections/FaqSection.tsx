@@ -78,11 +78,10 @@ export function FaqSection({ faqs }: FaqSectionProps) {
             return (
               <div
                 key={faq.id}
-                className={`border transition ${
-                  isOpen
-                    ? "border-[#00E5FF]/60 bg-[#101019] shadow-[0_0_25px_rgba(0,229,255,0.12)]"
-                    : "border-white/10 bg-[#101019]/75 hover:border-white/25"
-                }`}
+                className={`border transition ${isOpen
+                  ? "border-[#00E5FF]/60 bg-[#101019] shadow-[0_0_25px_rgba(0,229,255,0.12)]"
+                  : "border-white/10 bg-[#101019]/75 hover:border-white/25"
+                  }`}
               >
                 <h3>
                   <button
@@ -103,9 +102,8 @@ export function FaqSection({ faqs }: FaqSectionProps) {
                       </span>
                     </div>
                     <ChevronDown
-                      className={`h-5 w-5 shrink-0 text-[#00E5FF] transition-transform duration-200 ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
+                      className={`h-5 w-5 shrink-0 text-[#00E5FF] transition-transform duration-200 ${isOpen ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
                 </h3>
