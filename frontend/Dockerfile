@@ -7,6 +7,7 @@ COPY package.json ./
 RUN npm install
 
 COPY . .
+ENV INTERNAL_API_BASE_URL=http://backend:8000
 RUN npm run build
 
 EXPOSE 3000
