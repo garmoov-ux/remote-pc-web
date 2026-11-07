@@ -1,0 +1,17 @@
+{
+  "safety-gate": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python scripts/check_command.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "mcpServers": {
+    "rea": {
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/c",
+        "npx",
+        "-y",
+        "rea-agents@6.7.0",
+        "mcp"
+      ],
+      "env": {
+        "GHIDRA_INSTALL_DIR": "C:\\Users\\hskang\\tools\\ghidra_12.1.4_PUBLIC",
+        "JAVA_HOME": "C:\\Users\\hskang\\tools\\jdk-21.0.12.1+1"
+      }
+    },
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://postgres:password@localhost:5432/remote_pc_web"
+      ]
+    },
+    "redis": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-redis",
+        "redis://localhost:6379"
+      ]
+    },
+    "docker": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-docker"
+      ]
+    }
+  }
+}
+

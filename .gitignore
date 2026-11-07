@@ -1,0 +1,47 @@
+# 환경변수 및 비밀키 제외
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python & FastAPI
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+
+# Node.js & Frontend (Next.js / Vite)
+node_modules/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+
+# 데이터베이스 볼륨 및 로컬 파일
+postgres_data/
+redis_data/
+*.db
+*.sqlite
+*.sqlite3
+
+# 대용량 접속기 설치 바이너리 및 덤프 제외
+*.exe
+*.msi
+*.pcap
+*.bin
+
+# 브라우저 테스트 및 에디터 임시 파일
+.playwright-mcp/
+playwright-report/
+test-results/
+.DS_Store
+Thumbs.db
+
