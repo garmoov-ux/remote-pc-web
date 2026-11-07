@@ -85,23 +85,23 @@ export function HeroSection({
               좌석에 대기 없이 즉시 연결됩니다.
             </p>
 
-            {/* 버튼 영역 (모바일/태블릿 최적화) */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-3.5">
+            {/* 버튼 영역 (모바일에서도 항상 좌우 가로 1열 나란히 유지: flex-nowrap) */}
+            <div className="flex flex-row items-center gap-2.5 sm:gap-3.5">
               <button
                 type="button"
                 onClick={() => onOpenDownload("hero_cta")}
-                className="chamfer-btn shine-cta inline-flex items-center justify-center gap-3 bg-linear-to-r from-[#00E5FF] via-[#7DF9FF] to-[#00E5FF] px-6 sm:px-7 py-3.5 sm:py-4 font-display text-sm sm:text-[15px] font-black tracking-[0.04em] text-[#00131a] shadow-[0_0_22px_rgba(0,229,255,0.45)] transition hover:brightness-105 active:translate-y-0.5"
+                className="chamfer-btn shine-cta inline-flex flex-1 sm:flex-initial items-center justify-center gap-2 sm:gap-3 bg-linear-to-r from-[#00E5FF] via-[#7DF9FF] to-[#00E5FF] px-4 sm:px-7 py-3 sm:py-4 font-display text-xs sm:text-[15px] font-black tracking-[0.02em] sm:tracking-[0.04em] text-[#00131a] shadow-[0_0_22px_rgba(0,229,255,0.45)] transition hover:brightness-105 active:translate-y-0.5 whitespace-nowrap"
               >
-                <Download className="h-4.5 w-4.5 sm:h-5 sm:w-5" />
-                <span>접속기 설치 ({release.version})</span>
+                <Download className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                <span>접속기 설치</span>
               </button>
 
               <Link
                 href="#games"
-                className="chamfer-btn inline-flex items-center justify-center gap-2 border border-[#00E5FF]/40 bg-white/[0.03] px-5 sm:px-6 py-3.5 sm:py-4 font-mono text-xs sm:text-[13px] font-semibold tracking-[0.08em] uppercase text-[#00E5FF] transition hover:bg-[#00E5FF]/10 hover:text-white"
+                className="chamfer-btn inline-flex flex-1 sm:flex-initial items-center justify-center gap-1.5 sm:gap-2 border border-[#00E5FF]/40 bg-white/[0.03] px-3.5 sm:px-6 py-3 sm:py-4 font-mono text-[11px] sm:text-[13px] font-semibold tracking-[0.04em] sm:tracking-[0.08em] uppercase text-[#00E5FF] transition hover:bg-[#00E5FF]/10 hover:text-white whitespace-nowrap"
               >
-                <span>&gt; 게임 목록 보기</span>
-                <ChevronRight className="h-4 w-4" />
+                <span>&gt; 게임 목록</span>
+                <ChevronRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
               </Link>
             </div>
 
