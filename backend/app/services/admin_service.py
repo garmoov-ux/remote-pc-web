@@ -270,3 +270,4 @@ async def execute_admin_rpc_method(
         return NoticeItemSchema.model_validate(notice).model_dump()
 
     raise KeyError(f"지원하지 않는 RPC 메서드입니다: {method}")
+

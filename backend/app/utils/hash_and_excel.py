@@ -101,3 +101,4 @@ def build_download_stats_workbook(
     stream = BytesIO()
     wb.save(stream)
     return stream.getvalue()
+

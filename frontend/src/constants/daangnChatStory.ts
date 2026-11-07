@@ -133,3 +133,4 @@ export const DAANGN_MODAL_SCENARIOS: Record<
       "화려한 자격증보다 중요한 것은 실제 문제를 해결하는 기술과 AI의 융합입니다. 언제든 편하게 연락 주세요!",
   },
 };
+

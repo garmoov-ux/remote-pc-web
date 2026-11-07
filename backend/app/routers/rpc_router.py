@@ -65,3 +65,4 @@ async def handle_json_rpc(
             id=rpc_req.id,
             error={"code": -32603, "message": f"서버 내부 처리 오류: {exc}"},
         )
+

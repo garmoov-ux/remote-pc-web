@@ -63,3 +63,4 @@ async def get_current_admin(
         success=True,
         data={"username": decoded.get("sub"), "role": decoded.get("role")},
     )
+

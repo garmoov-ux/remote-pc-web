@@ -71,3 +71,4 @@ async def health_check() -> ApiResponse[dict[str, Any]]:
             "version": settings.client_installer_version,
         },
     )
+

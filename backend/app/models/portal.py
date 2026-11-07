@@ -113,3 +113,4 @@ class DownloadLog(Base, TimestampSoftDeleteMixin):
     client_ip_masked: Mapped[str] = mapped_column(String(64), default="0.0.0.0")
     user_agent: Mapped[str] = mapped_column(String(255), default="")
     referrer: Mapped[str] = mapped_column(String(255), default="")
+

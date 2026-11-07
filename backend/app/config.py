@@ -63,3 +63,4 @@ class Settings(BaseSettings):
 def get_settings() -> Settings:
     """캐싱된 전역 설정 인스턴스를 반환합니다."""
     return Settings()
+

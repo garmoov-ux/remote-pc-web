@@ -42,3 +42,4 @@ class JsonRpcResponse(BaseModel):
     result: Any | None = Field(default=None, description="성공 결과 데이터")
     error: dict[str, Any] | None = Field(default=None, description="JSON-RPC 에러 객체")
     id: str | int | None = Field(default=1, description="요청 식별자")
+

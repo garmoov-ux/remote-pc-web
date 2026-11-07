@@ -102,3 +102,4 @@ async def test_portal_fullstack_api_lifecycle() -> None:
                 == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             )
             assert len(excel_res.content) > 1000
+

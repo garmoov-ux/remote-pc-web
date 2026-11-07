@@ -183,3 +183,4 @@ class AdminLoginResponse(BaseModel):
     token_type: str = "bearer"
     username: str
     expires_in_minutes: int
+

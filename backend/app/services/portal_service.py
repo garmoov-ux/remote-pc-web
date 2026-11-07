@@ -220,3 +220,4 @@ async def record_download_event(
             else settings.client_installer_fallback_url
         ),
     }
+

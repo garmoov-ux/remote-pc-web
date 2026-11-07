@@ -78,3 +78,4 @@ async def list_service_games(
         data=[ServiceGameSchema.model_validate(item) for item in rows],
         meta={"count": len(rows)},
     )
+
