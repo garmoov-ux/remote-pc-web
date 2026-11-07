@@ -5,6 +5,7 @@
 
 "use client";
 
+import Image from "next/image";
 import {
   AlertTriangle,
   CheckCircle2,
@@ -141,10 +142,12 @@ export function GamesCatalogSection({ games }: GamesCatalogSectionProps) {
                   }`}
                 >
                   <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#0A0A0F]">
-                    <img
+                    <Image
                       src={game.thumbnail_url}
                       alt={game.title}
-                      loading="lazy"
+                      fill
+                      unoptimized
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#101019] via-transparent to-transparent" />

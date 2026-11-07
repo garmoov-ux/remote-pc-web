@@ -9,6 +9,7 @@
 
 "use client";
 
+import Link from "next/link";
 import { ChevronRight, Download } from "lucide-react";
 import type { ActionModalCategory } from "@/constants/daangnChatStory";
 import type { ClientRelease, SiteConfig, TelemetryData } from "@/types/portal";
@@ -56,7 +57,7 @@ export function HeroSection({
             {/* 상단 칩 배지 */}
             <div className="mb-4 sm:mb-6 inline-flex items-center gap-2 border border-[#00E5FF]/40 bg-[#00E5FF]/10 px-3 sm:px-3.5 py-1 sm:py-1.5 font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#00E5FF] chamfer-btn">
               <span className="h-1.5 w-1.5 rounded-full bg-[#B4FF39] shadow-[0_0_8px_#B4FF39] animate-pulse" />
-              <span>REMOTE-PC ACCESS GRID // REV 2.6</span>
+              <span>{siteConfig.brand_name} ACCESS GRID // REV 2.6</span>
             </div>
 
             {/* 메인 헤드라인 */}
@@ -86,13 +87,13 @@ export function HeroSection({
                 <span>접속기 설치 ({release.version})</span>
               </button>
 
-              <a
+              <Link
                 href="#games"
                 className="chamfer-btn inline-flex items-center justify-center gap-2 border border-white/20 bg-white/[0.04] px-5 sm:px-6 py-3.5 sm:py-4 font-mono text-xs sm:text-sm font-bold text-white transition hover:border-[#00E5FF] hover:bg-[#00E5FF]/10 hover:text-[#00E5FF]"
               >
                 <span>&gt; 게임 목록 보기</span>
                 <ChevronRight className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
 
             {/* 3대 핵심 뱃지 바 (모바일 가로 배치 최적화) */}

@@ -3,6 +3,7 @@
  * 3대 핵심 경쟁력(01 자체 기술팀, 02 365일 실시간 상담, 03 렉 없는 자체 최적화)과 4대 전담 파트를 시각화합니다.
  */
 
+import Image from "next/image";
 import type { TeamRole, WhyFeature } from "@/types/portal";
 
 interface WhyChooseSectionProps {
@@ -86,10 +87,12 @@ export function WhyChooseSection({
               >
                 <div className="mb-4 flex items-center justify-between">
                   <div className="flex h-12 w-12 items-center justify-center border border-[#00E5FF]/30 bg-[#0A0A0F] p-2.5">
-                    <img
+                    <Image
                       src={role.icon_url}
                       alt={role.title}
-                      loading="lazy"
+                      width={32}
+                      height={32}
+                      unoptimized
                       className="h-full w-full object-contain"
                     />
                   </div>

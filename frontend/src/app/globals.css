@@ -48,13 +48,13 @@
 }
 
 /* 디스플레이 숫자 전용 폰트 유틸리티 */
-.font-display {
+@utility font-display {
   font-family: "Orbitron", "Pretendard Variable", sans-serif;
   font-variant-numeric: tabular-nums;
 }
 
 /* 사이버 HUD 72px 직교 그리드 패턴 */
-.cyber-grid-pattern {
+@utility cyber-grid-pattern {
   background-image:
     linear-gradient(to right, rgba(0, 229, 255, 0.06) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 229, 255, 0.06) 1px, transparent 1px);
@@ -79,12 +79,12 @@
   }
 }
 
-.cyber-scan-sweep {
+@utility cyber-scan-sweep {
   animation: scanSweep 7s linear infinite;
 }
 
 /* 사이버 HUD 챔퍼(모서리 컷팅) 패널 & 버튼 */
-.chamfer-panel {
+@utility chamfer-panel {
   clip-path: polygon(
     0 0,
     calc(100% - 14px) 0,
@@ -95,7 +95,7 @@
   );
 }
 
-.chamfer-btn {
+@utility chamfer-btn {
   clip-path: polygon(
     0 0,
     calc(100% - 10px) 0,
@@ -107,30 +107,30 @@
 }
 
 /* 홀로그램 샤인 CTA 버튼 효과 */
-.shine-cta {
+@utility shine-cta {
   position: relative;
   overflow: hidden;
-}
 
-.shine-cta::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -120%;
-  width: 65%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.45),
-    transparent
-  );
-  transform: skewX(-24deg);
-  transition: left 0.55s ease;
-}
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 65%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.45),
+      transparent
+    );
+    transform: skewX(-24deg);
+    transition: left 0.55s ease;
+  }
 
-.shine-cta:hover::after {
-  left: 140%;
+  &:hover::after {
+    left: 140%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

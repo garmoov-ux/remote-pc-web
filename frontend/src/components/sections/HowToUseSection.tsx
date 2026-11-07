@@ -3,6 +3,7 @@
  * 01 접속기 설치 및 충전 -> 02 좌석 자동 연결 -> 03 집에서 원격 플레이 -> 04 분 단위 자동 차감 시퀀스를 시각화합니다.
  */
 
+import Image from "next/image";
 import { Download } from "lucide-react";
 import type { HowToStep } from "@/types/portal";
 
@@ -61,10 +62,12 @@ export function HowToUseSection({
             >
               {/* 스텝 일러스트 썸네일 */}
               <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-white/10 bg-[#0A0A0F]">
-                <img
+                <Image
                   src={step.image_url}
                   alt={`STEP ${step.step_no} ${step.title}`}
-                  loading="lazy"
+                  fill
+                  unoptimized
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#101019] via-transparent to-transparent opacity-80" />

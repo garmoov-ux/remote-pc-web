@@ -115,7 +115,7 @@ export function AdminDashboardView() {
     void loadData();
   }, [loadData]);
 
-  const handleLogin = async (e: React.FormEvent) => {
+  const handleLogin = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const res = await loginAdminApi(username, password);
@@ -132,7 +132,7 @@ export function AdminDashboardView() {
     }
   };
 
-  const handleUpsertGame = async (e: React.FormEvent) => {
+  const handleUpsertGame = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!token) {
       showNoticeModal("권한 필요", "우측 상단에서 관리자 로그인을 먼저 진행해 주세요.");
@@ -165,7 +165,7 @@ export function AdminDashboardView() {
     }
   };
 
-  const handleUpdateRelease = async (e: React.FormEvent) => {
+  const handleUpdateRelease = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!token) {
       showNoticeModal("권한 필요", "관리자 로그인 후 릴리스 정보를 변경할 수 있습니다.");
@@ -302,6 +302,7 @@ export function AdminDashboardView() {
             </div>
             <a
               href="/api/downloads/stats.xlsx"
+              download="stats.xlsx"
               className="mt-3 inline-flex items-center justify-center gap-2 bg-[#00E5FF] py-2.5 text-xs font-extrabold text-[#05080F] transition hover:bg-[#4DF0FF]"
             >
               <FileSpreadsheet className="h-4 w-4" />

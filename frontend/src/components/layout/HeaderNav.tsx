@@ -40,7 +40,7 @@ export function HeaderNav({
 
         {/* 좌측 브랜드 로고 + 실시간 가동 ONLINE 인디케이터 */}
         <div className="flex items-center gap-2 sm:gap-3">
-          <a
+          <Link
             href="#top"
             className="group flex items-center gap-2 sm:gap-2.5 text-left focus:outline-none"
           >
@@ -61,7 +61,7 @@ export function HeaderNav({
                 REMOTE PC BANG // ACCESS GRID
               </p>
             </div>
-          </a>
+          </Link>
         </div>
 
         {/* 중앙 데스크톱(> 900px / lg) 5대 섹션 스크롤 스파이 네비게이션 */}
