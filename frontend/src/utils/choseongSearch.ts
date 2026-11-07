@@ -62,3 +62,4 @@ export function matchesKoreanSearch(target: string, query: string): boolean {
   const targetChoseong = extractChoseong(cleanTarget);
   return targetChoseong.includes(cleanQuery);
 }
+

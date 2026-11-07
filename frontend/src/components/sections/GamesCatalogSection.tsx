@@ -248,3 +248,4 @@ export function GamesCatalogSection({ games }: GamesCatalogSectionProps) {
     </section>
   );
 }
+

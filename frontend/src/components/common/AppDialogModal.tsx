@@ -86,3 +86,4 @@ export function AppDialogModal({ modal, onClose }: AppDialogModalProps) {
     </div>
   );
 }
+

@@ -1,6 +1,6 @@
 /**
- * 원격플러그인 피시 (UNPLUG 원격 PC방) 메인 포털 페이지 엔트리(page.tsx)입니다.
- * 선제적 분할 원칙(150행 이내)에 따라 배경, 헤더, 8대 핵심 섹션, 푸터, 플로팅 바, 설치 안내 모달을 조립합니다.
+ *원격플러그인 피시 (UNPLUG 원격 PC방) 메인 포털 페이지 엔트리(page.tsx)입니다.
+ * 선제적 분할 원칙(150행 이내)에 따라 배경, 헤더, 8대 핵심 섹션, 푸터, 플로팅 바, 당근 채팅 요약 모달을 조립합니다.
  */
 
 "use client";
@@ -39,7 +39,10 @@ export default function PortalHomePage() {
   const activeSectionId = useScrollSpy(SECTION_IDS);
   const {
     isInstallModalOpen,
+    activeModalCategory,
+    setActiveModalCategory,
     lastTriggerSection,
+    openActionModal,
     openDownloadGuide,
     closeDownloadGuide,
   } = useClientDownload();
@@ -83,7 +86,7 @@ export default function PortalHomePage() {
         onClose={() => setIsMobileMenuOpen(false)}
         siteConfig={portalData.site_config}
         activeSectionId={activeSectionId}
-        onOpenDownload={openDownloadGuide}
+        onOpenAction={openActionModal}
       />
 
       {/* 메인 8대 핵심 포털 섹션 */}
@@ -93,6 +96,7 @@ export default function PortalHomePage() {
           telemetry={portalData.telemetry}
           release={portalData.latest_release}
           onOpenDownload={openDownloadGuide}
+          onOpenAction={openActionModal}
         />
         <QuickFlowBanner />
         <HowToUseSection
@@ -107,6 +111,7 @@ export default function PortalHomePage() {
         <NoticeAndCareSection
           notices={portalData.notices}
           siteConfig={portalData.site_config}
+          onOpenAction={openActionModal}
         />
         <FaqSection faqs={portalData.faqs} />
         <DownloadCtaSection
@@ -116,15 +121,20 @@ export default function PortalHomePage() {
         />
       </main>
 
-      {/* 하단 사업자 정보 푸터 & 우측 하단 플로팅 상담 바 & 설치 안내 모달 */}
-      <SiteFooter siteConfig={portalData.site_config} />
+      {/* 하단 사업자 정보 푸터 & 우측 하단 플로팅 상담 바 & 당근양파님 맞춤형 브리핑 모달 */}
+      <SiteFooter
+        siteConfig={portalData.site_config}
+        onOpenAction={openActionModal}
+      />
       <FloatingConsultBar
         siteConfig={portalData.site_config}
-        onOpenDownload={openDownloadGuide}
+        onOpenAction={openActionModal}
       />
       <InstallGuideModal
         isOpen={isInstallModalOpen}
         onClose={closeDownloadGuide}
+        category={activeModalCategory}
+        onChangeCategory={setActiveModalCategory}
         release={portalData.latest_release}
         siteConfig={portalData.site_config}
         triggerSection={lastTriggerSection}

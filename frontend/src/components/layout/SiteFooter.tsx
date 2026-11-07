@@ -4,15 +4,16 @@
 
 import Link from "next/link";
 import { ExternalLink, Monitor, PhoneCall, ShieldCheck } from "lucide-react";
+import type { ActionModalCategory } from "@/constants/daangnChatStory";
 import { NAV_SECTIONS } from "@/constants/portalData";
 import type { SiteConfig } from "@/types/portal";
-import { toTelHref } from "@/utils/formatters";
 
 interface SiteFooterProps {
   siteConfig: SiteConfig;
+  onOpenAction: (category: ActionModalCategory, source: string) => void;
 }
 
-export function SiteFooter({ siteConfig }: SiteFooterProps) {
+export function SiteFooter({ siteConfig, onOpenAction }: SiteFooterProps) {
   return (
     <footer className="relative z-10 border-t border-white/10 bg-[#07070B] py-12 text-xs text-[#8E95A9]">
       <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
@@ -48,12 +49,13 @@ export function SiteFooter({ siteConfig }: SiteFooterProps) {
               </p>
               <p>
                 <span className="font-semibold text-[#C4CAD9]">대표 이메일:</span>{" "}
-                <a
-                  href={`mailto:${siteConfig.contact_email}`}
+                <button
+                  type="button"
+                  onClick={() => onOpenAction("phone_contact", "footer_email")}
                   className="hover:text-[#00E5FF]"
                 >
                   {siteConfig.contact_email}
-                </a>
+                </button>
               </p>
               <p className="sm:col-span-2">
                 <span className="font-semibold text-[#C4CAD9]">사업장 소재지:</span>{" "}
@@ -91,35 +93,34 @@ export function SiteFooter({ siteConfig }: SiteFooterProps) {
               <p className="font-mono text-[11px] font-bold text-[#B4FF39]">
                 24/7 CUSTOMER CENTER
               </p>
-              <a
-                href={toTelHref(siteConfig.cs_phone)}
+              <button
+                type="button"
+                onClick={() => onOpenAction("phone_contact", "footer_phone")}
                 className="mt-1.5 flex items-center gap-1.5 font-mono text-lg font-extrabold text-white hover:text-[#00E5FF]"
               >
                 <PhoneCall className="h-4 w-4 text-[#00E5FF]" />
                 <span>{siteConfig.cs_phone}</span>
-              </a>
+              </button>
               <p className="mt-1 text-[11px] text-[#8E95A9]">
                 365일 연중무휴 24시간 전화·문자·카카오톡·AnyDesk 원격지원 상시 대기
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
-                <a
-                  href={siteConfig.kakao_channel_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={() => onOpenAction("kakao_consult", "footer_kakao")}
                   className="inline-flex items-center gap-1 border border-[#FEE500]/40 bg-[#FEE500]/10 px-2.5 py-1 text-[11px] font-bold text-[#FEE500] transition hover:bg-[#FEE500]/20"
                 >
                   <span>카카오톡 상담</span>
                   <ExternalLink className="h-3 w-3" />
-                </a>
-                <a
-                  href={siteConfig.anydesk_download_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onOpenAction("phone_contact", "footer_anydesk")}
                   className="inline-flex items-center gap-1 border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] font-semibold text-white transition hover:border-[#00E5FF]"
                 >
                   <span>AnyDesk 원격지원</span>
                   <ExternalLink className="h-3 w-3" />
-                </a>
+                </button>
               </div>
             </div>
           </div>

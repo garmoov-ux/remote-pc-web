@@ -7,16 +7,16 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { Download, MessageSquare, PhoneCall, X } from "lucide-react";
+import type { ActionModalCategory } from "@/constants/daangnChatStory";
 import { NAV_SECTIONS } from "@/constants/portalData";
 import type { SiteConfig } from "@/types/portal";
-import { toTelHref } from "@/utils/formatters";
 
 interface MobileMenuOverlayProps {
   isOpen: boolean;
   onClose: () => void;
   siteConfig: SiteConfig;
   activeSectionId: string;
-  onOpenDownload: (source: string) => void;
+  onOpenAction: (category: ActionModalCategory, source: string) => void;
 }
 
 export function MobileMenuOverlay({
@@ -24,7 +24,7 @@ export function MobileMenuOverlay({
   onClose,
   siteConfig,
   activeSectionId,
-  onOpenDownload,
+  onOpenAction,
 }: MobileMenuOverlayProps) {
   useEffect(() => {
     if (!isOpen) return;
@@ -70,7 +70,7 @@ export function MobileMenuOverlay({
       </div>
 
       {/* 섹션 이동 링크 목록 */}
-      <nav className="mt-6 flex flex-1 flex-col gap-2">
+      <nav className="mt-6 flex flex-1 flex-col gap-2 overflow-y-auto">
         {NAV_SECTIONS.map((item) => {
           const isActive = activeSectionId === item.id;
           return (
@@ -108,7 +108,7 @@ export function MobileMenuOverlay({
           type="button"
           onClick={() => {
             onClose();
-            onOpenDownload("mobile_menu");
+            onOpenAction("client_download", "mobile_menu_download");
           }}
           className="chamfer-btn flex w-full items-center justify-center gap-2 bg-[#00E5FF] py-3.5 text-sm font-extrabold text-[#05080F]"
         >
@@ -117,22 +117,28 @@ export function MobileMenuOverlay({
         </button>
 
         <div className="grid grid-cols-2 gap-2.5">
-          <a
-            href={toTelHref(siteConfig.cs_phone)}
+          <button
+            type="button"
+            onClick={() => {
+              onClose();
+              onOpenAction("phone_contact", "mobile_menu_phone");
+            }}
             className="flex items-center justify-center gap-1.5 border border-white/15 bg-white/5 py-3 text-xs font-bold text-white"
           >
             <PhoneCall className="h-3.5 w-3.5 text-[#B4FF39]" />
             <span>{siteConfig.cs_phone}</span>
-          </a>
-          <a
-            href={siteConfig.kakao_channel_url}
-            target="_blank"
-            rel="noopener noreferrer"
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              onClose();
+              onOpenAction("kakao_consult", "mobile_menu_kakao");
+            }}
             className="flex items-center justify-center gap-1.5 border border-[#FEE500]/40 bg-[#FEE500]/10 py-3 text-xs font-bold text-[#FEE500]"
           >
             <MessageSquare className="h-3.5 w-3.5" />
             <span>카카오톡 24시 상담</span>
-          </a>
+          </button>
         </div>
       </div>
     </div>

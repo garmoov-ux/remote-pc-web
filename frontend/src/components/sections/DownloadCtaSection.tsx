@@ -91,15 +91,14 @@ export function DownloadCtaSection({
                 <span>접속기 설치 파일 다운로드</span>
               </button>
 
-              <a
-                href={release.fallback_cdn_url}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => onOpenDownload("download_section_mirror")}
                 className="flex w-full items-center justify-center gap-1.5 border border-white/15 bg-white/5 py-3 text-xs font-bold text-[#C4CAD9] transition hover:border-[#00E5FF] hover:text-white"
               >
                 <span>외부 CDN 미러에서 직접 내려받기</span>
                 <ExternalLink className="h-3.5 w-3.5" />
-              </a>
+              </button>
             </div>
           </div>
         </div>

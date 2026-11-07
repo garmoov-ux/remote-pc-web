@@ -14,6 +14,7 @@ import {
   ShieldCheck,
   Zap,
 } from "lucide-react";
+import type { ActionModalCategory } from "@/constants/daangnChatStory";
 import type { ClientRelease, SiteConfig, TelemetryData } from "@/types/portal";
 
 interface HeroSectionProps {
@@ -21,6 +22,7 @@ interface HeroSectionProps {
   telemetry: TelemetryData;
   release: ClientRelease;
   onOpenDownload: (source: string) => void;
+  onOpenAction: (category: ActionModalCategory, source: string) => void;
 }
 
 export function HeroSection({
@@ -28,6 +30,7 @@ export function HeroSection({
   telemetry,
   release,
   onOpenDownload,
+  onOpenAction,
 }: HeroSectionProps) {
   return (
     <section
@@ -108,10 +111,16 @@ export function HeroSection({
                 <Zap className="h-4 w-4 text-[#00E5FF]" />
                 <span>1만원 기준 600분(10시간) · 분 단위 차감</span>
               </span>
-              <span className="inline-flex items-center gap-1.5">
+              <button
+                type="button"
+                onClick={() => onOpenAction("phone_contact", "hero_cs_chip")}
+                className="inline-flex items-center gap-1.5 text-left transition hover:text-[#00E5FF]"
+              >
                 <Cpu className="h-4 w-4 text-[#FF2E97]" />
-                <span>24시 고객센터 ({siteConfig.cs_phone})</span>
-              </span>
+                <span className="underline decoration-white/30 underline-offset-4">
+                  24시 고객센터 ({siteConfig.cs_phone})
+                </span>
+              </button>
             </div>
           </div>
 
@@ -201,3 +210,4 @@ export function HeroSection({
     </section>
   );
 }
+

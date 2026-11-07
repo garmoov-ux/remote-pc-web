@@ -126,3 +126,4 @@ export function FaqSection({ faqs }: FaqSectionProps) {
     </section>
   );
 }
+

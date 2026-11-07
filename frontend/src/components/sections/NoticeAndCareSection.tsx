@@ -1,6 +1,6 @@
 /**
  * 공지사항·필수 주의사항·원격지원·24시간 고객센터 섹션(#notice — NoticeAndCareSection) 컴포넌트입니다.
- * 1) 접속기 정상 종료 2단계, 2) 20분 의무 사용 안내, 3) AnyDesk 원격지원 안내, 4) 24시간 고객센터 원클릭 연결을 제공합니다.
+ * 1) 접속기 정상 종료 2단계, 2) 20분 의무 사용 안내, 3) AnyDesk 원격지원 안내, 4) 24시간 고객센터(전화/문자/카카오톡) 모달 연동을 제공합니다.
  */
 
 import {
@@ -13,17 +13,19 @@ import {
   Send,
   Wrench,
 } from "lucide-react";
+import type { ActionModalCategory } from "@/constants/daangnChatStory";
 import type { NoticeItem, SiteConfig } from "@/types/portal";
-import { toSmsHref, toTelHref } from "@/utils/formatters";
 
 interface NoticeAndCareSectionProps {
   notices: NoticeItem[];
   siteConfig: SiteConfig;
+  onOpenAction: (category: ActionModalCategory, source: string) => void;
 }
 
 export function NoticeAndCareSection({
   notices,
   siteConfig,
+  onOpenAction,
 }: NoticeAndCareSectionProps) {
   return (
     <section
@@ -122,15 +124,16 @@ export function NoticeAndCareSection({
 
                 {notice.cta_url && notice.cta_label && (
                   <div className="mt-5 pt-2">
-                    <a
-                      href={notice.cta_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <button
+                      type="button"
+                      onClick={() =>
+                        onOpenAction("phone_contact", "notice_anydesk")
+                      }
                       className="chamfer-btn flex w-full items-center justify-center gap-2 bg-[#00E5FF] py-3 text-xs font-extrabold text-[#05080F] transition hover:bg-[#4DF0FF]"
                     >
                       <span>{notice.cta_label}</span>
                       <ExternalLink className="h-3.5 w-3.5" />
-                    </a>
+                    </button>
                   </div>
                 )}
               </article>
@@ -156,31 +159,32 @@ export function NoticeAndCareSection({
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row lg:col-span-5 lg:justify-end">
-              <a
-                href={toTelHref(siteConfig.cs_phone)}
+              <button
+                type="button"
+                onClick={() => onOpenAction("phone_contact", "notice_cs_phone")}
                 className="chamfer-btn flex items-center justify-center gap-2 bg-[#00E5FF] px-5 py-3.5 text-xs font-extrabold text-[#05080F] transition hover:bg-[#4DF0FF] sm:text-sm"
               >
                 <PhoneCall className="h-4 w-4" />
                 <span>전화 {siteConfig.cs_phone}</span>
-              </a>
+              </button>
 
-              <a
-                href={toSmsHref(siteConfig.cs_phone)}
+              <button
+                type="button"
+                onClick={() => onOpenAction("phone_contact", "notice_cs_sms")}
                 className="flex items-center justify-center gap-1.5 border border-white/20 bg-white/5 px-4 py-3.5 text-xs font-bold text-white transition hover:border-[#00E5FF] sm:text-sm"
               >
                 <Send className="h-3.5 w-3.5 text-[#00E5FF]" />
                 <span>문자 상담</span>
-              </a>
+              </button>
 
-              <a
-                href={siteConfig.kakao_channel_url}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => onOpenAction("kakao_consult", "notice_cs_kakao")}
                 className="flex items-center justify-center gap-1.5 border border-[#FEE500]/50 bg-[#FEE500]/15 px-5 py-3.5 text-xs font-extrabold text-[#FEE500] transition hover:bg-[#FEE500] hover:text-[#05080F] sm:text-sm"
               >
                 <MessageSquare className="h-4 w-4" />
                 <span>카카오톡 상담</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>

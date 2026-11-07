@@ -99,3 +99,4 @@ export async function callAdminRpc<T = unknown>(
   }
   return json.result as T;
 }
+

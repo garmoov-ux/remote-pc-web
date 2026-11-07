@@ -147,3 +147,4 @@ export interface DialogModalState {
   cancelLabel?: string;
   onConfirm?: () => void;
 }
+

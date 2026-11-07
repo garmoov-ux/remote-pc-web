@@ -52,3 +52,4 @@ export function useGamesFilter(games: ServiceGame[]) {
     visibleGames,
   };
 }
+
