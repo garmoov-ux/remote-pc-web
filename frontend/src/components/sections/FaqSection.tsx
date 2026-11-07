@@ -43,7 +43,7 @@ export function FaqSection({ faqs }: FaqSectionProps) {
           <div>
             <div className="inline-flex items-center gap-2 font-mono text-xs font-bold tracking-widest text-[#00E5FF]">
               <span>SEC // 05</span>
-              <span className="h-[1px] w-8 bg-[#00E5FF]/50" />
+              <span className="h-px w-8 bg-[#00E5FF]/50" />
               <span>FREQUENTLY ASKED QUESTIONS</span>
             </div>
             <h2

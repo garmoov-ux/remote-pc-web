@@ -29,7 +29,7 @@ export function QuickFlowBanner() {
       aria-label="무상담 3단계 빠른 시작 안내"
       className="relative z-10 mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8 -mt-4 sm:-mt-6 mb-8"
     >
-      <div className="relative text-center border border-white/12 bg-gradient-to-b from-[#12121c]/70 to-[#0a0a10]/70 p-6 sm:p-10 lg:p-12 shadow-[0_0_35px_rgba(0,0,0,0.6)] chamfer-panel">
+      <div className="relative text-center border border-white/12 bg-linear-to-b from-[#12121c]/70 to-[#0a0a10]/70 p-6 sm:p-10 lg:p-12 shadow-[0_0_35px_rgba(0,0,0,0.6)] chamfer-panel">
         {/* 상단 텍스트 */}
         <h2 className="font-display font-black text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white tracking-tight leading-snug">
           전화도. 예약도. 줄서기도.{" "}

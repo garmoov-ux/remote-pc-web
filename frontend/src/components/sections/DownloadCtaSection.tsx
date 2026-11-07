@@ -22,9 +22,9 @@ export function DownloadCtaSection({
     <section
       id="download"
       aria-labelledby="download-section-title"
-      className="relative z-10 border-t border-[#00E5FF]/25 bg-gradient-to-b from-[#0D0D18] to-[#0A0A0F] py-20"
+      className="relative z-10 border-t border-[#00E5FF]/25 bg-linear-to-b from-[#0D0D18] to-[#0A0A0F] py-20"
     >
-      <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-340 px-4 sm:px-6 lg:px-8">
         <div className="chamfer-panel relative overflow-hidden border border-[#00E5FF]/50 bg-[#101019] p-7 shadow-[0_0_50px_rgba(0,229,255,0.18)] sm:p-10 lg:p-12">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
             {/* 좌측 패키지 설명 */}

@@ -40,13 +40,13 @@ export function GamesCatalogSection({ games }: GamesCatalogSectionProps) {
       aria-labelledby="games-section-title"
       className="relative z-10 scroll-mt-20 border-t border-white/10 bg-[#0D0D16]/75 py-20 sm:py-24"
     >
-      <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-340 px-4 sm:px-6 lg:px-8">
         {/* 섹션 상단 헤더 */}
         <div className="mb-8 flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
           <div>
             <div className="inline-flex items-center gap-2 font-mono text-xs font-bold tracking-widest text-[#00E5FF]">
               <span>SEC // 02</span>
-              <span className="h-[1px] w-8 bg-[#00E5FF]/50" />
+              <span className="h-px w-8 bg-[#00E5FF]/50" />
               <span>SUPPORTED GAMES ARCHIVE</span>
             </div>
             <h2
@@ -141,7 +141,7 @@ export function GamesCatalogSection({ games }: GamesCatalogSectionProps) {
                       : "border-white/10 hover:-translate-y-1 hover:border-[#00E5FF]/70 hover:shadow-[0_10px_25px_rgba(0,229,255,0.16)]"
                   }`}
                 >
-                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#0A0A0F]">
+                  <div className="relative aspect-4/3 w-full overflow-hidden bg-[#0A0A0F]">
                     <Image
                       src={game.thumbnail_url}
                       alt={game.title}
@@ -150,7 +150,7 @@ export function GamesCatalogSection({ games }: GamesCatalogSectionProps) {
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#101019] via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-[#101019] via-transparent to-transparent" />
 
                     {/* 좌상단 인덱스 코드 */}
                     <span className="absolute top-2 left-2 bg-[#0A0A0F]/85 px-1.5 py-0.5 font-mono text-[10px] font-bold text-[#8E95A9]">
@@ -215,7 +215,7 @@ export function GamesCatalogSection({ games }: GamesCatalogSectionProps) {
 
         {/* 하단 바로접속 지원 & 보안 정책 이용 제한 게임 명확 고지 배너 */}
         <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-2">
-          <div className="flex items-start gap-3.5 border border-[#B4FF39]/35 bg-[#B4FF39]/[0.05] p-4 sm:p-5">
+          <div className="flex items-start gap-3.5 border border-[#B4FF39]/35 bg-[#B4FF39]/5 p-4 sm:p-5">
             <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#B4FF39]" />
             <div>
               <div className="flex items-center gap-2">
@@ -231,7 +231,7 @@ export function GamesCatalogSection({ games }: GamesCatalogSectionProps) {
             </div>
           </div>
 
-          <div className="flex items-start gap-3.5 border border-[#FF3B5C]/40 bg-[#FF3B5C]/[0.06] p-4 sm:p-5">
+          <div className="flex items-start gap-3.5 border border-[#FF3B5C]/40 bg-[#FF3B5C]/6 p-4 sm:p-5">
             <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-[#FF3B5C]" />
             <div>
               <span className="text-sm font-extrabold text-white">

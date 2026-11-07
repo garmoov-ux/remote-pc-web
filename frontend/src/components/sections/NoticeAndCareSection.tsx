@@ -33,12 +33,12 @@ export function NoticeAndCareSection({
       aria-labelledby="notice-section-title"
       className="relative z-10 scroll-mt-20 border-t border-white/10 bg-[#0D0D16]/80 py-20 sm:py-24"
     >
-      <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-340 px-4 sm:px-6 lg:px-8">
         {/* 섹션 상단 헤더 */}
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 font-mono text-xs font-bold tracking-widest text-[#FF2E97]">
             <span>SEC // 04</span>
-            <span className="h-[1px] w-8 bg-[#FF2E97]/50" />
+            <span className="h-px w-8 bg-[#FF2E97]/50" />
             <span>MANDATORY RULES & 24/7 CARE</span>
           </div>
           <h2
@@ -142,7 +142,7 @@ export function NoticeAndCareSection({
         </div>
 
         {/* 하단 24시간 실시간 고객센터 통합 데스크 배너 */}
-        <div className="chamfer-panel mt-10 border border-[#00E5FF]/40 bg-gradient-to-r from-[#101019] via-[#131424] to-[#101019] p-6 sm:p-8">
+        <div className="chamfer-panel mt-10 border border-[#00E5FF]/40 bg-linear-to-r from-[#101019] via-[#131424] to-[#101019] p-6 sm:p-8">
           <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-12">
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 text-xs font-bold text-[#B4FF39]">

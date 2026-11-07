@@ -90,7 +90,7 @@ export function HeroSection({
               <button
                 type="button"
                 onClick={() => onOpenDownload("hero_cta")}
-                className="chamfer-btn shine-cta inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#00E5FF] via-[#7DF9FF] to-[#00E5FF] px-6 sm:px-7 py-3.5 sm:py-4 font-display text-sm sm:text-[15px] font-black tracking-[0.04em] text-[#00131a] shadow-[0_0_22px_rgba(0,229,255,0.45)] transition hover:brightness-105 active:translate-y-0.5"
+                className="chamfer-btn shine-cta inline-flex items-center justify-center gap-3 bg-linear-to-r from-[#00E5FF] via-[#7DF9FF] to-[#00E5FF] px-6 sm:px-7 py-3.5 sm:py-4 font-display text-sm sm:text-[15px] font-black tracking-[0.04em] text-[#00131a] shadow-[0_0_22px_rgba(0,229,255,0.45)] transition hover:brightness-105 active:translate-y-0.5"
               >
                 <Download className="h-4.5 w-4.5 sm:h-5 sm:w-5" />
                 <span>접속기 설치 ({release.version})</span>
@@ -125,7 +125,7 @@ export function HeroSection({
 
           {/* 우측 텔레메트리 HUD 스탯 카드 (벤치마크 1:1 .hstat 스타일) */}
           <div className="lg:col-span-5 w-full mt-4 lg:mt-0">
-            <div className="relative border border-white/15 bg-gradient-to-b from-[#12121c]/90 to-[#0a0a10]/92 shadow-[0_0_35px_rgba(0,229,255,0.12)] chamfer-panel">
+            <div className="relative border border-white/15 bg-linear-to-b from-[#12121c]/90 to-[#0a0a10]/92 shadow-[0_0_35px_rgba(0,229,255,0.12)] chamfer-panel">
               {/* 상단 라벨 */}
               <div className="flex items-center justify-between border-b border-white/10 px-5 sm:px-6 py-3.5">
                 <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.14em] text-[#8E95A9]">

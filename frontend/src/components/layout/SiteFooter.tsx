@@ -16,7 +16,7 @@ interface SiteFooterProps {
 export function SiteFooter({ siteConfig, onOpenAction }: SiteFooterProps) {
   return (
     <footer className="relative z-10 border-t border-white/10 bg-[#07070B] py-12 text-xs text-[#8E95A9]">
-      <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-340 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 border-b border-white/10 pb-8 lg:grid-cols-12">
           {/* 좌측 브랜드 및 사업자 등록 정보 */}
           <div className="space-y-3 lg:col-span-7">

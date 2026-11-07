@@ -111,7 +111,7 @@ export function MobileMenuOverlay({
             onClose();
             onOpenAction("client_download", "mobile_menu_download");
           }}
-          className="chamfer-btn shine-cta flex w-full items-center justify-center gap-2 bg-gradient-to-r from-[#00E5FF] via-[#7DF9FF] to-[#00E5FF] py-3.5 font-display text-sm font-black text-[#00131a] shadow-[0_0_24px_rgba(0,229,255,0.45)]"
+          className="chamfer-btn shine-cta flex w-full items-center justify-center gap-2 bg-linear-to-r from-[#00E5FF] via-[#7DF9FF] to-[#00E5FF] py-3.5 font-display text-sm font-black text-[#00131a] shadow-[0_0_24px_rgba(0,229,255,0.45)]"
         >
           <Download className="h-4 w-4" />
           <span>접속기 설치 패키지 다운로드</span>

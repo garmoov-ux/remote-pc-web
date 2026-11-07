@@ -21,12 +21,12 @@ export function WhyChooseSection({
       aria-labelledby="why-section-title"
       className="relative z-10 scroll-mt-20 border-t border-white/10 py-20 sm:py-24"
     >
-      <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-340 px-4 sm:px-6 lg:px-8">
         {/* 섹션 상단 헤더 */}
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 font-mono text-xs font-bold tracking-widest text-[#00E5FF]">
             <span>SEC // 03</span>
-            <span className="h-[1px] w-8 bg-[#00E5FF]/50" />
+            <span className="h-px w-8 bg-[#00E5FF]/50" />
             <span>CORE COMPETENCE & TEAM</span>
           </div>
           <h2

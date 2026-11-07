@@ -132,7 +132,7 @@ export function HeaderNav({
           <button
             type="button"
             onClick={() => onOpenDownload("header_nav")}
-            className="hidden lg:inline-flex chamfer-btn shine-cta items-center gap-1.5 bg-gradient-to-r from-[#00E5FF] via-[#7DF9FF] to-[#00E5FF] px-4 py-2 text-xs font-black text-[#00131a] shadow-[0_0_20px_rgba(0,229,255,0.45)] transition hover:brightness-110 active:translate-y-0.5"
+            className="hidden lg:inline-flex chamfer-btn shine-cta items-center gap-1.5 bg-linear-to-r from-[#00E5FF] via-[#7DF9FF] to-[#00E5FF] px-4 py-2 text-xs font-black text-[#00131a] shadow-[0_0_20px_rgba(0,229,255,0.45)] transition hover:brightness-110 active:translate-y-0.5"
           >
             <Download className="h-4 w-4" />
             <span>접속기 설치</span>

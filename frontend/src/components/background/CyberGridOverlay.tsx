@@ -20,7 +20,7 @@ export function CyberGridOverlay() {
         style={{ background: "radial-gradient(circle, rgba(255,46,151,0.09) 0%, transparent 70%)" }}
       />
       {/* 수직 스캔 스윕 바 */}
-      <div className="cyber-scan-sweep absolute inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-[#00E5FF]/40 to-transparent" />
+      <div className="cyber-scan-sweep absolute inset-x-0 h-[2px] bg-linear-to-r from-transparent via-[#00E5FF]/40 to-transparent" />
     </div>
   );
 }

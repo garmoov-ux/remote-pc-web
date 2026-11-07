@@ -199,7 +199,7 @@ export function AdminDashboardView() {
     <div className="min-h-screen bg-[#0A0A0F] text-white">
       {/* 상단 관리자 바 */}
       <header className="border-b border-[#00E5FF]/25 bg-[#101019] py-4">
-        <div className="mx-auto flex max-w-[1360px] flex-wrap items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-340 flex-wrap items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4">
             <Link
               href="/"
@@ -262,7 +262,7 @@ export function AdminDashboardView() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-[1360px] px-4 py-8 sm:px-6 lg:px-8">
+      <main className="mx-auto max-w-340 px-4 py-8 sm:px-6 lg:px-8">
         {/* 상단 요약 카드 3종 + 엑셀 다운로드 */}
         <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <div className="border border-white/10 bg-[#101019] p-5">

@@ -22,13 +22,13 @@ export function HowToUseSection({
       aria-labelledby="how-section-title"
       className="relative z-10 scroll-mt-20 py-20 sm:py-24"
     >
-      <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-340 px-4 sm:px-6 lg:px-8">
         {/* 섹션 헤더 */}
         <div className="mb-12 flex flex-col items-start justify-between gap-4 border-b border-white/10 pb-6 md:flex-row md:items-end">
           <div>
             <div className="inline-flex items-center gap-2 font-mono text-xs font-bold tracking-widest text-[#00E5FF]">
               <span>SEC // 01</span>
-              <span className="h-[1px] w-8 bg-[#00E5FF]/50" />
+              <span className="h-px w-8 bg-[#00E5FF]/50" />
               <span>OPERATION SEQUENCE</span>
             </div>
             <h2
@@ -61,7 +61,7 @@ export function HowToUseSection({
               className="chamfer-panel group flex flex-col overflow-hidden border border-white/10 bg-[#101019]/90 transition duration-300 hover:-translate-y-1 hover:border-[#00E5FF]/60 hover:shadow-[0_12px_30px_rgba(0,229,255,0.14)]"
             >
               {/* 스텝 일러스트 썸네일 */}
-              <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-white/10 bg-[#0A0A0F]">
+              <div className="relative aspect-16/10 w-full overflow-hidden border-b border-white/10 bg-[#0A0A0F]">
                 <Image
                   src={step.image_url}
                   alt={`STEP ${step.step_no} ${step.title}`}
@@ -70,7 +70,7 @@ export function HowToUseSection({
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#101019] via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#101019] via-transparent to-transparent opacity-80" />
                 <span className="absolute top-3 left-3 border border-[#00E5FF]/50 bg-[#0A0A0F]/90 px-2.5 py-1 font-display text-xs font-black text-[#00E5FF]">
                   STEP {step.step_no}
                 </span>
