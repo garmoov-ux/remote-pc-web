@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-label="서비스 개발 아이콘">
+  <rect width="520" height="520" fill="#151019"/>
+  <rect x="112" y="130" width="296" height="224" rx="26" fill="none" stroke="#e7e1ea" stroke-opacity=".76" stroke-width="10"/>
+  <path d="M112 188h296" stroke="#e7e1ea" stroke-opacity=".42" stroke-width="8"/>
+  <circle cx="146" cy="158" r="7" fill="#e7e1ea" fill-opacity=".76"/>
+  <circle cx="174" cy="158" r="7" fill="#e7e1ea" fill-opacity=".58"/>
+  <circle cx="202" cy="158" r="7" fill="#e7e1ea" fill-opacity=".4"/>
+  <path d="M214 250l-48 44 48 44" fill="none" stroke="#f5f2f6" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M306 250l48 44-48 44" fill="none" stroke="#f5f2f6" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M280 232l-40 124" fill="none" stroke="#b8afb9" stroke-width="14" stroke-linecap="round"/>
+  <path d="M142 396h236" stroke="#e7e1ea" stroke-opacity=".48" stroke-width="12" stroke-linecap="round"/>
+  <path d="M190 426h140" stroke="#e7e1ea" stroke-opacity=".28" stroke-width="8" stroke-linecap="round"/>
+</svg>

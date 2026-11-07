@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-label="서비스 운영 아이콘">
+  <rect width="520" height="520" fill="#151019"/>
+  <rect x="96" y="124" width="328" height="236" rx="30" fill="none" stroke="#e7e1ea" stroke-opacity=".68" stroke-width="10"/>
+  <g stroke="#e7e1ea" stroke-opacity=".18" stroke-width="4">
+    <path d="M132 316h256"/>
+    <path d="M132 268h256"/>
+    <path d="M132 220h256"/>
+  </g>
+  <path d="M154 290l54-50 48 34 68-88 44 58" fill="none" stroke="#f5f2f6" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="208" cy="240" r="12" fill="#d8d0da"/>
+  <circle cx="256" cy="274" r="12" fill="#d8d0da"/>
+  <circle cx="324" cy="186" r="12" fill="#f5f2f6"/>
+  <path d="M220 360h80v44h-80z" fill="#151019" stroke="#e7e1ea" stroke-opacity=".58" stroke-width="7"/>
+  <path d="M174 408h172" stroke="#e7e1ea" stroke-opacity=".62" stroke-width="13" stroke-linecap="round"/>
+  <path d="M126 156h42M126 178h78" stroke="#e7e1ea" stroke-opacity=".32" stroke-width="7" stroke-linecap="round"/>
+</svg>

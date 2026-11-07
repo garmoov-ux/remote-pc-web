@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-label="인프라 최적화 아이콘">
+  <rect width="520" height="520" fill="#151019"/>
+  <g stroke="#e7e1ea" stroke-opacity=".14" stroke-width="3">
+    <path d="M106 148h308M106 260h308M106 372h308M148 106v308M260 106v308M372 106v308"/>
+  </g>
+  <g stroke="#f5f2f6" stroke-width="9" stroke-linecap="round">
+    <path d="M160 174l100 86 100-86"/>
+    <path d="M160 346l100-86 100 86"/>
+    <path d="M260 142v236"/>
+  </g>
+  <g fill="#151019" stroke="#d8d0da" stroke-width="8">
+    <rect x="112" y="126" width="96" height="96" rx="22"/>
+    <rect x="312" y="126" width="96" height="96" rx="22"/>
+    <rect x="112" y="298" width="96" height="96" rx="22"/>
+    <rect x="312" y="298" width="96" height="96" rx="22"/>
+    <circle cx="260" cy="260" r="46"/>
+  </g>
+  <g fill="#f5f2f6" fill-opacity=".72">
+    <rect x="142" y="157" width="36" height="8" rx="4"/>
+    <rect x="342" y="157" width="36" height="8" rx="4"/>
+    <rect x="142" y="329" width="36" height="8" rx="4"/>
+    <rect x="342" y="329" width="36" height="8" rx="4"/>
+    <circle cx="260" cy="260" r="10"/>
+  </g>
+</svg>

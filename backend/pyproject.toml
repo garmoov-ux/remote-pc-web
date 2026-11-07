@@ -1,0 +1,44 @@
+# 원격플러그인 피시 (UNPLUG 원격 PC방) 웹 포털 FastAPI 백엔드 프로젝트 설정 (Python 3.12+ & uv)
+
+[project]
+name = "remote-pc-web-backend"
+version = "0.1.0"
+description = "원격플러그인 피시 원격 PC방 웹 포털 및 접속기 배포·관리 FastAPI 백엔드 서버"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "pydantic>=2.10.0",
+    "pydantic-settings>=2.6.0",
+    "sqlalchemy[asyncio]>=2.0.36",
+    "asyncpg>=0.30.0",
+    "aiosqlite>=0.20.0",
+    "alembic>=1.14.0",
+    "redis>=5.2.0",
+    "argon2-cffi>=23.1.0",
+    "pyjwt>=2.10.0",
+    "openpyxl>=3.1.5",
+    "httpx>=0.28.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.24.0",
+    "ruff>=0.8.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+]
+
